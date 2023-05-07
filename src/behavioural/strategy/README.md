@@ -2,13 +2,11 @@
 
 ## Intenção
 
-*Definir uma família de algoritmos, encapsular cada um deles e fazê-los intercambiáveis. O strategy permite que o algoritmo varie independentemente dos clientes que o utilizam.*
+_Definir uma família de algoritmos, encapsular cada um deles e fazê-los intercambiáveis. O strategy permite que o algoritmo varie independentemente dos clientes que o utilizam._
 
 ---
 
 ## Sobre o Strategy
-
-Em vídeo: https://www.youtube.com/watch?v=mUagTgSnriQ&list=PLbIBj8vQhvm0VY5YrMrafWaQY2EnJ3j8H&index=27
 
 O Strategy é um padrão de projeto que visa separar o conceito de algoritmo da regra de negócio para permitir que vários algoritmos possam ser implementados sem a necessidade de alterar a regra de negócio ou outros algoritmos que já existam no sistema.
 
@@ -16,9 +14,9 @@ Veja um exemplo de um problema e a solução do strategy.
 
 ### Problema
 
-Imagine que você tem um e-commerce que implementa promoções esporadicamente para aumentar as vendas. 
+Imagine que você tem um e-commerce que implementa promoções esporadicamente para aumentar as vendas.
 
-As promoções podem variar de acordo com a época, com o preço total do carrinho de compras ou até com a quantidade de produtos adquiridos pelo cliente. Por exemplo: *compre 3 produtos e ganhe 10% de desconto*; *compre R$150 e ganhe 15% de desconto*; *compre 5 produtos da categoria X e ganhe outro*.
+As promoções podem variar de acordo com a época, com o preço total do carrinho de compras ou até com a quantidade de produtos adquiridos pelo cliente. Por exemplo: _compre 3 produtos e ganhe 10% de desconto_; _compre R$150 e ganhe 15% de desconto_; _compre 5 produtos da categoria X e ganhe outro_.
 
 Essa promoções podem gerar muitas condicionais dentro da regra de negócio do carrinho de compras ao obter o preço com desconto. Como, por exemplo:
 
@@ -35,6 +33,7 @@ if (cart.quantity >= 3) {
   }
 }
 ```
+
 Não há problemas nessa lógica enquanto houver apenas essa promoção. Porém, a partir do momento que a promoção muda ou que implementemos outras promoções que são aplicadas ao mesmo tempo, devemos alterar a classe do carrinho de compras. Isso quebra o princípio do Aberto/Fechado e o princípio da responsabilidade única. E tem mais, se quiséssemos guardar a promoção antiga para retorná-la posteriormente, eu penso que alguns programadores poderiam pensar em fazer algo assim:
 
 ```typescript
@@ -63,11 +62,11 @@ Além de não ser uma solução, continuamos quebrando o princípio da responsab
 
 ### Solução - Strategy
 
-O Strategy diz que devemos separar os algoritmos da classe do carrinho de compras. 
+O Strategy diz que devemos separar os algoritmos da classe do carrinho de compras.
 
 Nesse caso, podemos gerar uma família de algoritmos que implementam a mesma interface e podem aplicar descontos diferentes da maneira que precisarmos.
 
-Poderíamos, por exemplo, ter uma interface `DiscountStrategy` com o método `getDiscount` para garantir que todas as classes de desconto tenham o método `getDiscount`. 
+Poderíamos, por exemplo, ter uma interface `DiscountStrategy` com o método `getDiscount` para garantir que todas as classes de desconto tenham o método `getDiscount`.
 
 Agora podemos fazer com que o carrinho de compras tenha um campo para receber uma classe do tipo `DiscountStrategy`. Ao chamar o método para obter o valor total no carrinho de compras, ele não precisa fazer nenhuma lógica adicional, basta chamar a sua estratégia de desconto.
 
@@ -76,7 +75,7 @@ Por exemplo:
 ```typescript
 export class ShoppingCart {
   private discount: DiscountStrategy = new DefaultDiscount();
-  
+
   // ... Código omitido
 
   getTotal(): number {
@@ -94,7 +93,7 @@ Melhor do que isso, agora você pode mudar de promoção quando quiser simplesme
 ```typescript
 export class ShoppingCart {
   private discount: DiscountStrategy = new DefaultDiscount();
-  
+
   // ... Código omitido
 
   getTotal(): number {
@@ -135,11 +134,13 @@ Veja o código e os diagramas dessa pasta para entender como o Strategy é imple
 O que é bom ou ruim no Strategy:
 
 **Bom:**
+
 - Troca herança por composição
 - Separa a regra de negócio de algoritmos complexos
 - Aplica os princípios do aberto/fechado e da responsabilidade única
 
 **Ruim:**
+
 - Pode ser complexo criar toda uma hierarquia de classes para aplicar novos algoritmos
 - Você pode obter o mesmo resultado com funções caso a linguagem de programação permitir
 - O código cliente precisa conhecer as estratégias que vai usar
