@@ -1,4 +1,4 @@
-# Padrões de projeto comportamentais (behavioural)
+# ![](../../public/img/icon-typescript_resized.png 'Behavioural') Padrões de projeto comportamentais (behavioural)
 
 Os padrões de projeto comportamentais se preocupam com os algoritmos e a atribuição de responsabilidades entre objetos. Os padrões comportamentais não descrevem apenas padrões de objetos ou classes, mas também os padrões de comunicação entre eles. Esses padrões caracterizam fluxos de controle difíceis de seguir em tempo de execução. Eles afastam o foco do fluxo de controle para permitir que você se concentre somente na maneira como os objetos são interconectados.
 
@@ -9,7 +9,7 @@ Os padrões de projeto comportamentais originais da GoF são:
 - **Observer** - define uma dependência um para muitos entre objetos, de modo que, quando um objeto muda de estado, todos os seus dependentes são automaticamente notificados e atualizados.
 - **Strategy** - Define uma família de algoritmos, encapsular cada um deles e fazê-los intercambiáveis. O strategy permite que o algoritmo varie independentemente dos clientes que o utilizam.
 
-  Demais padrões que não estão na apresentação do trabalho.
+Demais padrões que não estão na apresentação do trabalho.
 
 - **Chain of responsibility** - evita o acoplamento do remetente de uma solicitação ao seu destinatário, dando a mais de um objeto a chance de tratar a solicitação. Encadeia os objetos receptores e passa a solicitação ao longo da cadeia até que um objeto a trate.
 - **Command** - encapsula uma solicitação como um objeto, desta forma permitindo que você parametrize clientes com diferentes solicitações, enfileire ou registre (log) solicitações e suporte operações que podem ser desfeitas.

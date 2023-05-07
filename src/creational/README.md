@@ -1,4 +1,4 @@
-# Padrões de projeto de criação (creational)
+# ![](../../public/img/icon-typescript_resized.png 'Creational') Padrões de projeto de criação (creational)
 
 Os padrões de projeto de criação são padrões que abstraem o processo de instanciação de objetos. Eles ajudam a tornar um sistema independente de como seus objetos são representados, criados e compostos. Geralmente, atingem este objetivo delegando tarefas para outros objetos.
 
@@ -6,9 +6,9 @@ Esses padrões dão muita flexibilidade ao sistema, porque encapsulam o conhecim
 
 ## Padrões e intenções
 
-Os padrões de projeto de criação originais da GoF são:
-
 Demais padrões que não estão na apresentação do trabalho.
+
+Os padrões de projeto de criação originais da GoF são:
 
 - **Abstract Factory** - fornecer uma interface para criação de famílias de objetos relacionados ou dependentes sem especificar suas classes concretas;
 - **Builder** - separar a construção de um objeto complexo de sua representação, de modo que o mesmo processo de construção possa criar diferentes representações;

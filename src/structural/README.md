@@ -1,4 +1,4 @@
-# Padrões de projeto estruturais (structural)
+# ![](../../public/img/icon-typescript_resized.png 'Structural') Padrões de projeto estruturais (structural)
 
 Os padrões estruturais se preocupam com a forma como os objetos são compostos para formar estruturas maiores.
 
@@ -8,7 +8,7 @@ Os padrões de projeto estruturais originais da GoF são:
 
 - **Decorator** - atribui responsabilidades adicionais a um objeto dinamicamente. Os Decorators fornecem uma alternativa flexível à subclasses para extensão da funcionalidade.
 
-  Demais padrões que não estão na apresentação do trabalho.
+Demais padrões que não estão na apresentação do trabalho.
 
 - **Adapter** - converte a interface de uma classe em outra interface esperada pelos clientes. O Adapter permite que certas classes trabalhem em conjunto, pois de outra forma seria impossível por causa de suas interfaces incompatíveis.
 - **Bridge** - separa uma abstração da sua implementação, de modo que as duas possam variar independentemente.
