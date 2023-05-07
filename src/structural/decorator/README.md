@@ -12,9 +12,17 @@ O Decorator é uma padrão de projeto usado para adicionar funcionalidades a obj
 
 ---
 
-## Estrutura
+## Tarefa e Estrutura
 
-Veja a pasta diagramas.
+O Ressaca`s é o bar de maior sucesso da região. A razão é a variada oferta de drinks a disposição dos clientes.
+
+Por outro lado, o sistema de pedidos do bar se tornou mais complexo e está difícil mantê-lo por conta da grande variedade de drinks. O problema é que a pedido dos clientes, novos drinks foram criados pela adição de diferentes aditivos aos drinks existentes.
+
+Os projetistas criaram novas classes para representar os novos drinks e calcular os preços de cada um deles levando em conta os diferentes ingredientes, e em decorrência houve uma verdadeira explosão de classes para representar os diferentes tipos de drinks.
+
+O objetivo é apresentar o projeto (Diagrama de Classes) e Implementar o sistema Drinks do Ressaca's Bar, usando o padrão DECORATOR.
+
+Veja a pasta diagramas e na pasta product.
 
 ## Aplicabilidade
 
@@ -35,7 +43,7 @@ O que é bom ou ruim no Decorator:
 **Bom:**
 
 - Composição é melhor do que herança em grande maioria dos casos
-- É fácil adicionar ou remover comportamento de objetos sem tocar em código já escrito ou testado (OCP)
+- É fácil adicionar ou remover comportamento de objetos sem tocar em código já escrito ou testado (OCP - open close principal)
 - É possível decorar um objeto já decorado, adicionando ainda mais funcionalidades (camadas)
 
 **Ruim:**

@@ -1,11 +1,11 @@
-import { TShirt } from './product/t-shirt';
-import { ProductStampDecorator } from './product/product-stamp-decorator';
-import { ProductCustomizationDecorator } from './product/product-customization-decorator';
+import { Drinks } from './product/drinks';
+import { ProductPersonDecorator } from './product/productPersonDecorator';
+import { ProductCustomizationDecorator } from './product/productCustomizationDecorator';
 
-const tShirt = new TShirt();
-const tShirtWithStamp = new ProductStampDecorator(tShirt);
-const customizedTShirt = new ProductCustomizationDecorator(tShirt);
+const drinks = new Drinks();
+const drinksWith = new ProductPersonDecorator(drinks);
+const customizedDrinks = new ProductCustomizationDecorator(drinks);
 
-console.log(tShirt.getPrice(), tShirt.getName());
-console.log(tShirtWithStamp.getPrice(), tShirtWithStamp.getName());
-console.log(customizedTShirt.getPrice(), customizedTShirt.getName());
+console.log(drinks.getName(), drinks.getPrice());
+console.log(customizedDrinks.getName(), customizedDrinks.getPrice());
+console.log(drinksWith.getName(), drinksWith.getPrice());
