@@ -1,4 +1,4 @@
-# Decorator - Structural (Estrutural)
+# ![](../../../public/img/icon-decorator-mini.png 'Decorator') Decorator - Structural (Estrutural)
 
 ## Intenção
 
@@ -28,9 +28,9 @@ Veja a pasta diagramas e na pasta product.
 
 Use o padrão Decorator quando:
 
-- você precisa adicionar funcionalidades em objetos sem quebrar ou alterar o código existente
-- você quiser usar composição ao invés de herança
-- você percebe que pode ocorrer uma explosão de subclasses em determinada estrutura
+- adicionado funcionalidades em objetos sem quebrar ou alterar o código existente
+- usada composição ao invés de herança
+- perceber que pode ocorrer uma explosão de subclasses em determinada estrutura
 
 ## Implementação
 
