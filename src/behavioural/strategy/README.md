@@ -1,4 +1,4 @@
-# Strategy - Behavioural (Comportamental)
+# ![](../../../public/img/icon-strategy-mini.png 'Strategy') Strategy - Behavioural (Comportamental)
 
 ## Intenção
 
