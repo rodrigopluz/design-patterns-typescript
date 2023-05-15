@@ -8,7 +8,9 @@ _Define uma dependência um para muitos entre objetos, de modo que, quando um ob
 
 ## Sobre o Observer
 
-....
+- Implementado com dois tipos de objetos: objetos observáveis (Subject) e objetos observadores (Observer)
+- Objetos observáveis (Subject) tem uma referência para todos os seus observadores. Isso torna possível adicionar, remover e notificar todos observadores quando seu estado mudar.
+- Objetos observadores (Observer) devem ter meios de receber notificações de seus Observáveis. Geralmente isso é feito com apenas um método.
 
 ---
 
@@ -32,7 +34,7 @@ O que é bom ou ruim no Observer:
 
 **Bom:**
 
-- Usa o SRP e OCP
+- Usa o SRP (Single Responsability Principal) e OCP (Open Close Principal)
 - Facilita a comunicação entre objetos em tempo de execução
 
 **Ruim:**
