@@ -46,7 +46,3 @@ O que é bom ou ruim no Observer:
 **Ruim:**
 
 - Pode ser complexo ou impossível manter a ordem em que as notificações são enviadas
-
-```
-
-```
