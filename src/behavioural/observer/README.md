@@ -20,7 +20,9 @@ Veja a pasta diagramas.
 
 Comando para executar esse pattern observer nobrowser:
 
-`$ npx tsc src/behavioural/observer/observer.ts -w `
+```typescript
+$ npx tsc src/behavioural/observer/observer.ts -w
+```
 
 ## Aplicabilidade
 
@@ -44,3 +46,7 @@ O que é bom ou ruim no Observer:
 **Ruim:**
 
 - Pode ser complexo ou impossível manter a ordem em que as notificações são enviadas
+
+```
+
+```
