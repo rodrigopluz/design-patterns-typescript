@@ -18,6 +18,9 @@ _Define uma dependência um para muitos entre objetos, de modo que, quando um ob
 
 Veja a pasta diagramas.
 
+Comando para executar esse pattern observer nobrowser.
+`$ npx tsc src/behavioural/observer/observer.ts -w `
+
 ## Aplicabilidade
 
 Use o Observer quando:
