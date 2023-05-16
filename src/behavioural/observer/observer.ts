@@ -43,6 +43,15 @@ class ParagraphObserver implements Observer {
   }
 }
 
+class DivObserver implements Observer {
+  constructor(public element: HTMLDivElement) {}
+  update(observable: Subject): void {
+    if (observable instanceof InputObservable) {
+      this.element.innerText = observable.element.value;
+    }
+  }
+}
+
 function makeInput(): HTMLInputElement {
   const input = document.createElement('input');
   document.body.appendChild(input);
