@@ -36,6 +36,12 @@ Use o padrão Decorator quando:
 
 Veja o código e os diagramas dessa pasta para entender como o Decorator é implementado.
 
+Comando para executar o pattern decorator no terminal:
+
+```zsh
+$ npx ts-node src/structural/decorator/main.ts
+```
+
 ## Consequências
 
 O que é bom ou ruim no Decorator:

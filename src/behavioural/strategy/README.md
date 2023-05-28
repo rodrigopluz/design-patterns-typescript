@@ -97,6 +97,12 @@ Use o Strategy quando:
 
 Veja o código e os diagramas dessa pasta para entender como o Strategy é implementado.
 
+Comando para executar o pattern strategy no terminal:
+
+```zsh
+$ npx ts-node src/behavioural/strategy/strategy.ts
+```
+
 ## Consequências
 
 O que é bom ou ruim no Strategy:
