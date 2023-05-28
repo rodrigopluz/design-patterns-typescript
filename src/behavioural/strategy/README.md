@@ -14,14 +14,13 @@ Veja um exemplo de um problema e a solução do strategy.
 
 ### Problema
 
-Imagine que você tem um e-commerce que implementa promoções esporadicamente para aumentar as vendas.
+Imagine que você tem alguns personagens, e que não teria a implementação de qual seria a sua arma de uso preferido desse personagem.
 
 As promoções podem variar de acordo com a época, com o preço total do carrinho de compras ou até com a quantidade de produtos adquiridos pelo cliente. Por exemplo: _compre 3 produtos e ganhe 10% de desconto_; _compre R$150 e ganhe 15% de desconto_; _compre 5 produtos da categoria X e ganhe outro_.
 
 Essa promoções podem gerar muitas condicionais dentro da regra de negócio do carrinho de compras ao obter o preço com desconto. Como, por exemplo:
 
 ```typescript
-// - Carrinho precisa ter no mínimo 3 produtos
 // - De acordo com o valor total o desconto pode aumentar
 if (cart.quantity >= 3) {
   if (cart.total >= 100 && cart.total < 200) {
@@ -73,16 +72,19 @@ Agora podemos fazer com que o carrinho de compras tenha um campo para receber um
 Por exemplo:
 
 ```typescript
-export class ShoppingCart {
-  private discount: DiscountStrategy = new DefaultDiscount();
+class Personagem {
+  private arma: Arma;
 
-  // ... Código omitido
-
-  getTotal(): number {
-    return this.discount.getDiscount(this);
+  constructor(arma: Arma) {
+    this.arma = arma;
   }
 
-  // ... Código omitido
+  public lutar(): void {
+    this.arma.usarArma();
+  }
+
+  // Método que permite trocar a arma do personagem
+  ...
 }
 ```
 
@@ -91,22 +93,23 @@ Perceba que a classe do carrinho de compras não precisa fazer nenhuma lógica c
 Melhor do que isso, agora você pode mudar de promoção quando quiser simplesmente configurando o campo `discount`, por exemplo:
 
 ```typescript
-export class ShoppingCart {
-  private discount: DiscountStrategy = new DefaultDiscount();
+class Personagem {
+  private arma: Arma;
 
-  // ... Código omitido
-
-  getTotal(): number {
-    return this.discount.getDiscount(this);
+  constructor(arma: Arma) {
+    this.arma = arma;
   }
 
-  setDiscount(discount: DiscountStrategy): void {
-    // Configura um outro desconto qualquer
-    this.discount = discount;
+  public lutar(): void {
+    this.arma.usarArma();
   }
 
-  // ... Código omitido
+  public setArma(arma: Arma): void {
+    this.arma = arma;
+  }
 }
+
+export default Personagem;
 ```
 
 Para trocar de promoção de desconto, apenas crie uma nova classe com o algoritmo do novo desconto e configure o carrinho usando `setDiscount`.
@@ -116,6 +119,12 @@ Para trocar de promoção de desconto, apenas crie uma nova classe com o algorit
 ## Estrutura
 
 Veja a pasta diagramas.
+
+Comando para executar o pattern strategy no browser:
+
+```zsh
+$ npx tsc src/behavioural/strategy/strategy.ts -w
+```
 
 ## Aplicabilidade
 

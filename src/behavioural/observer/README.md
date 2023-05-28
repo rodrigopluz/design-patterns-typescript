@@ -20,7 +20,7 @@ Veja a pasta diagramas.
 
 Comando para executar o pattern observer no browser:
 
-```typescript
+```zsh
 $ npx tsc src/behavioural/observer/observer.ts -w
 ```
 
