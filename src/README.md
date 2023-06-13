@@ -1,8 +1,8 @@
 # O que é um padrão de projeto?
 
-Padrões de projeto são soluções para problemas comuns em projetos de software, e eles são como plantas das obras pré fabricadas, que você pode customizar para resolver um problema de projeto recorrente em seu código.
+Padrões de projeto são soluções para problemas comuns em projetos de software, e eles poderiamos dizer que são como plantas das obras pré fabricadas, que se pode customizar para resolver um problema de projeto recorrente ao código.
 
-E você não pode apenas encontrar um padrão e copiá-lo para dentro do seu projeto, como faria com funções e bibliotecas que encontradas pela internet. O padrão não é um pedaço de código específico, mas um conceito geral para resolver um problema em particular. Poderia seguirmos os detalhes do padrão e implementar uma solução que se adeque às realidades do projeto.
+Não pode apenas encontrar um padrão e copiá-lo para dentro do projeto, como faria com funções e bibliotecas que são encontradas pela internet. O padrão não é um pedaço de código específico, mas um conceito geral para resolver um problema em particular. Poderia-mos seguir-mos detalhes do padrão e implementar uma solução que se adeque às realidades do projeto.
 
 Nesse projeto, foi aplicado os conseitos do livro Padrões de _Projetos: Soluções Reutilizáveis de Software Orientados a Objetos_ - Gof
 
@@ -16,4 +16,4 @@ A maioria dos padrões são descritos formalmente para que as pessoas possam rep
 - A **Motivação** - explica a fundo o problema e a solução que o padrão torna possível.
 - As **Estruturas** - de classes mostram cada parte do padrão e como se relacionam.
 
-Alguns livros de padrão listam outros detalhes úteis, tais como a aplicabilidade do padrão, etapas de implementação, e relações com outros padrões.
+Alguns livros de padrões, listam outros detalhes úteis, tais como a aplicabilidade do padrão, etapas de implementação, e relações com outros padrões.
