@@ -38,6 +38,17 @@ var ParagraphObserver = /** @class */ (function () {
     };
     return ParagraphObserver;
 }());
+var DivObserver = /** @class */ (function () {
+    function DivObserver(element) {
+        this.element = element;
+    }
+    DivObserver.prototype.update = function (observable) {
+        if (observable instanceof InputObservable) {
+            this.element.innerText = observable.element.value;
+        }
+    };
+    return DivObserver;
+}());
 function makeInput() {
     var input = document.createElement('input');
     document.body.appendChild(input);
